@@ -1,5 +1,7 @@
 # ActiveSupportAliasClassMethod
 
+[![Build Status](https://secure.travis-ci.org/mrkn/active_support_alias_class_method.png?branch=master)](http://travis-ci.org/mrkn/active_support_alias_class_method)
+
 A supplementary library of activesupport to provide ```alias_class_method``` and ```alias_class_method_chain```.
 
 ## Installation
