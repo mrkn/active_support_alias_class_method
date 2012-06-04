@@ -14,4 +14,6 @@ Gem::Specification.new do |gem|
   gem.name          = "active_support_alias_class_method"
   gem.require_paths = ["lib"]
   gem.version       = ActiveSupportAliasClassMethod::VERSION
+
+  gem.add_dependency('activesupport', '~> 3.0.0')
 end
