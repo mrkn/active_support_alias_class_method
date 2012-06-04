@@ -1,6 +1,12 @@
 require 'active_support/core_ext/kernel/singleton_class'
 
 class Module
+  def alias_class_method(new, original)
+    singleton_class.class_eval do
+      alias_method new, original
+    end
+  end
+
   def alias_class_method_chain(target, feature)
     # Strip out punctuation on predicates or bang methods since
     # e.g. target?_without_feature is not a valid method name.

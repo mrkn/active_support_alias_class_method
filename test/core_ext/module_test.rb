@@ -42,6 +42,14 @@ class ClassMethodAliasingTest < Test::Unit::TestCase
     Object.instance_eval { remove_const :FooClassWithBarClassMethod }
   end
 
+  def test_alias_class_method
+    assert_respond_to @class, :bar
+    @class.class_eval do
+      alias_class_method :foo, :bar
+    end
+    assert_respond_to @class, :foo
+  end
+
   def test_alias_class_method_chain
     assert @class.respond_to?(:bar)
     feature_aliases = [:bar_with_baz, :bar_without_baz]
