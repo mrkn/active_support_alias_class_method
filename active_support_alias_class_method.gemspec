@@ -4,8 +4,8 @@ require File.expand_path('../lib/active_support_alias_class_method/version', __F
 Gem::Specification.new do |gem|
   gem.authors       = ["Kenta Murata"]
   gem.email         = ["mrkn@cookpad.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{A supplementary library of activesupport to provide alias_class_method and alias_class_method_chain}
+  gem.summary       = %q{Providing alias_class_method and alias_class_method_chain}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)
