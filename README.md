@@ -1,6 +1,6 @@
 # ActiveSupportAliasClassMethod
 
-TODO: Write a gem description
+A supplementary library of activesupport to provide ```alias_class_method``` and ```alias_class_method_chain```.
 
 ## Installation
 
@@ -18,7 +18,30 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'active_support_alias_class_method/core_ext/module'
+
+class Foo
+  def self.foo
+    :foo
+  end
+
+  alias_class_method :bar, :foo
+end
+
+Foo.foo #=> :foo
+Foo.bar #=> :foo
+
+class Foo
+  def self.foo_with_baz
+    [:baz, foo_without_baz]
+  end
+
+  alias_class_method_chain :foo, :baz
+end
+
+Foo.foo #=> [:baz, :foo]
+```
 
 ## Contributing
 
