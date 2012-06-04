@@ -1,5 +1,9 @@
 ---
 language: ruby
+branches:
+  only:
+    - master
+    - /\Av\d+[.\d]+_maintenance\z/
 rvm:
   - 1.9.3-p194
   - ree
